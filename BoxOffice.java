@@ -4,7 +4,7 @@
  * Lab: Week 01 Lab 01
  * Date: 09/10/2026
  *
- * This program calculates the box office revenue calculations with certain inputs according to directions
+ * This program calculates the box office revenue calculations with certain inputs according to  directions
  */
 
 
@@ -50,7 +50,7 @@ public class BoxOffice {
         // distributor receives the last 80%
         double distributorAmount = grossBoxOffice * 0.80;
 
-        // display results
+        // display results, %30-s added to make everything even
         System.out.printf("%-30s %s%n", "Movie Name:", movieName);
         System.out.printf("%-30s %d%n", "Adult Tickets Sold:", adultTickets);
         System.out.printf("%-30s %d%n", "Child Tickets Sold:", childTickets);

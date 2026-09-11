@@ -4,7 +4,7 @@
  * Lab: Week 01 Lab 01
  * Date: 09/10/2026
  *
- * This program calculates the interest earned and final balance of a savings account using compound interest.
+ * This program calculates the interest earned and final balance of a savings account using compound interest
  */
 
 
@@ -53,7 +53,7 @@ public class InterestEarned {
         // calculate interest earned
         double interestEarned = amount - principal;
 
-        // display results
+        // display results, %30-s added to make everything even
         System.out.printf("%nInterest Rate: %.2f%%%n", annualRate);
         System.out.printf("Times Compounded: %d%n", timesCompounded);
         System.out.printf("Principal: $%.2f%n", principal);
