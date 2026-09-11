@@ -1,8 +1,19 @@
-import java.util.Scanner;
-public class BoxOffice {
-    public static void main(String[]) {
+/*
+ * Name: Liam C
+ * Course: CMP129
+ * Lab: Week 01 Lab 01
+ * Date: 09/10/2026
+ *
+ * This program calculates the box office revenue calculations with certain inputs according to directions
+ */
 
-        //create scanner for user input
+
+import java.util.Scanner;
+
+public class BoxOffice {
+    public static void main(String[] args) {
+
+        // create scanner for user input
         Scanner keyboard = new Scanner(System.in);
 
         // ask user for movie info
@@ -10,9 +21,19 @@ public class BoxOffice {
         String movieName = keyboard.nextLine();
 
         System.out.print("Enter the number of adult tickets sold: ");
+        while (!keyboard.hasNextInt()) {
+            System.out.println("Please enter a valid number.");
+            keyboard.next(); // discard invalid input
+            System.out.print("Enter the number of adult tickets sold: ");
+        }
         int adultTickets = keyboard.nextInt();
 
         System.out.print("Enter the number of child tickets sold: ");
+        while (!keyboard.hasNextInt()) {
+            System.out.println("Please enter a valid number.");
+            keyboard.next(); // discard invalid input
+            System.out.print("Enter the number of child tickets sold: ");
+        }
         int childTickets = keyboard.nextInt();
 
         // ticket price
@@ -29,7 +50,7 @@ public class BoxOffice {
         // distributor receives the last 80%
         double distributorAmount = grossBoxOffice * 0.80;
 
-        // display results, %30-s added to make everything even
+        // display results
         System.out.printf("%-30s %s%n", "Movie Name:", movieName);
         System.out.printf("%-30s %d%n", "Adult Tickets Sold:", adultTickets);
         System.out.printf("%-30s %d%n", "Child Tickets Sold:", childTickets);
